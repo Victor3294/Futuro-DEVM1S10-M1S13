@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import CardTrilha from "./components/CardTrilha"
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const listaDeTrilhas = [
+    {
+      nomeTrilha: "Trilha da Costa da Lagoa",
+      cidade: "Florianópolis",
+      estado: "SC",
+      duracao: "120",
+      trajeto: "4",
+      dificuldade: "iniciante",
+      tipo: "caminhada / trekking",
+      nomeUsuario: "Guilherme André",
+      urlImagem: "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    {
+      listaDeTrilhas.map((trilha, index) => (
+        <CardTrilha dadosTrilha={trilha} key={index} />
+      ))
+    }
     </>
   )
 }
