@@ -20,18 +20,12 @@ function App() {
   return (
     <>
     <Cabecalho />
-    <Outlet>
-      
-    </Outlet>
+    <Outlet />
 
 
 
-    {isLoading && <p>Trilhas carregando</p>}
-    {!isLoading && !!trilhas &&
-     trilhas.map((trilha, index) => (
-        <CardTrilha dadosTrilha={trilha} key={index} />
-      ))
-    }
+
+   
       
       
     </>
@@ -39,3 +33,10 @@ function App() {
 }
 
 export default App
+
+//  {isLoading && <p>Trilhas carregando</p>}
+//     {!isLoading && !!trilhas &&
+//      trilhas.map((trilha, index) => (
+//         <CardTrilha dadosTrilha={trilha} key={index} />
+//       ))
+//     }

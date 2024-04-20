@@ -1,7 +1,7 @@
 function PaginaListaTrilhas(){
     return(
         <>
-            <h1>Pagina Cadastro Trilhas</h1>
+            <h1>Pagina Lista trilhas</h1>
         </>
     )
 
