@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
 .mainheader{
     background-color: #504908;
     color: #FFFFFF;
@@ -15,4 +15,10 @@
     list-style: none;
     display: flex;
     gap: 40px;
+}
+
+.link{
+    color: #FFFFFF;
+    font-weight: normal;
+    text-decoration: none;
 }

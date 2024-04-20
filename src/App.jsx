@@ -1,35 +1,15 @@
-import CardTrilha from "./components/CardTrilha"
-import useFetch from "./hooks/useFetch.jsx"
-import Cabecalho from "./components/Cabecalho/index.jsx"
-import "./App.css"
-import { useEffect, useState } from "react"
+import Cabecalho from "./components/Cabecalho/index.jsx";
+import "./App.css";
+import { Outlet } from "react-router-dom";
+import { TrilhasContextProvider } from "./contexts/TrilhasContext.jsx";
 
 function App() {
-  const [listaDeTrilhas, isLoading] = useFetch(
-    "/listaTrilhas.json"
-  )
-
-  const [trilhas, setTrilhas] = useState([])
-  useEffect(() =>{
-    if(!!listaDeTrilhas && !isLoading){
-      setTrilhas(listaDeTrilhas.trilhas)
-    }
-  }, [listaDeTrilhas])
-
   return (
-    <>
-    <Cabecalho></Cabecalho>
-    
-    {isLoading && <p>Trilhas carregando</p>}
-    {!isLoading && !!trilhas &&
-     trilhas.map((trilha, index) => (
-        <CardTrilha dadosTrilha={trilha} key={index} />
-      ))
-    }
-      
-      
-    </>
-  )
+    <TrilhasContextProvider>
+      <Cabecalho />
+      <Outlet />
+    </TrilhasContextProvider>
+  );
 }
 
-export default App
+export default App;
