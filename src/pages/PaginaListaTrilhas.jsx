@@ -11,10 +11,14 @@ function PaginaListaTrilhas() {
       <h1>Pagina Lista trilhas</h1>
       {isLoading && <p>Trilhas carregando</p>}
       {!isLoading &&
-        !!trilhas &&
-        trilhas.map((trilha, index) => (
-          <CardTrilha dadosTrilha={trilha} key={index} />
-        ))}
+        !!trilhas ? (
+          trilhas.map((trilha, index) => (
+            <CardTrilha dadosTrilha={trilha} key={index} />
+          ))
+        ) : (
+          <span>Não há trilhas disponives</span>
+        )
+        }
     </>
   );
 }
