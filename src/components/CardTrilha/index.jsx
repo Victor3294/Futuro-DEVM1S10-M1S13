@@ -1,4 +1,4 @@
-// import * as PropTypes from "prop-types"
+import * as PropTypes from "prop-types"
 
 function CardTrilha ({dadosTrilha}){
     return(
@@ -15,6 +15,7 @@ function CardTrilha ({dadosTrilha}){
 
 CardTrilha.propTypes = {
     dadosTrilha: PropTypes.exact({
+        id: PropTypes.number.isRequired,
         nomeTrilha: PropTypes.string.isRequired,
         cidade: PropTypes.string.isRequired,
         estado: PropTypes.string.isRequired,

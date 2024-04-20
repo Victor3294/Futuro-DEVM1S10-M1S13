@@ -1,0 +1,40 @@
+{
+  "trilhas": [
+    {
+      "id": 1,
+      "nomeTrilha": "Trilha da Pedra da Gávea",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ",
+      "duracao": 6,
+      "trajeto": 8,
+      "dificuldade": "Difícil",
+      "tipo": "caminhada / trekking",
+      "nomeUsuario": "Desconhecido",
+      "urlImagem": ""
+    },
+    {
+      "id": 2,
+      "nomeTrilha": "Trilha do Pico da Bandeira",
+      "cidade": "Alto Caparaó",
+      "estado": "MG",
+      "duracao": 8,
+      "trajeto": 12,
+      "dificuldade": "Difícil",
+      "tipo": "caminhada / trekking",
+      "nomeUsuario": "Desconhecido",
+      "urlImagem": ""
+    },
+    {
+      "id": 3,
+      "nomeTrilha": "Trilha da Costa da Lagoa",
+      "cidade": "Florianópolis",
+      "estado": "SC",
+      "duracao": 120,
+      "trajeto": 4,
+      "dificuldade": "Iniciante",
+      "tipo": "caminhada / trekking",
+      "nomeUsuario": "Guilherme André",
+      "urlImagem": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+  ]
+}
