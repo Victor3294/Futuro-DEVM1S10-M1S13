@@ -5,12 +5,10 @@ function Cabecalho(){
     return(
         <div className={style.mainheader}>
             <div><p>Adventure Trails FD</p></div>
-            <div>
-                <ul className={style.navBarHeader}>
-                    <li>Explorar Trilhas</li>
-                    <li>Cadastrar Trilhas</li>
-                </ul>
-            </div>
+            <nav className={style.navBarHeader}>
+                <a href="#" className={style.link}>Explorar Trilhas</a>
+                <a href="#" className={style.link}>Cadastrar Trilhas</a>
+            </nav>
         </div>
     )
 }

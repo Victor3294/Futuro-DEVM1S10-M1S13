@@ -16,3 +16,9 @@
     display: flex;
     gap: 40px;
 }
+
+.link{
+    color: #FFFFFF;
+    font-weight: normal;
+    text-decoration: none;
+}

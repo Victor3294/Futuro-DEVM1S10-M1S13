@@ -20,7 +20,9 @@ function App() {
   return (
     <>
     <Cabecalho />
-    <Outlet />
+    <Outlet>
+      
+    </Outlet>
 
 
 
