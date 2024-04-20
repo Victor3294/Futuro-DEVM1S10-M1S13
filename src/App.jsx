@@ -3,6 +3,7 @@ import useFetch from "./hooks/useFetch.jsx"
 import Cabecalho from "./components/Cabecalho/index.jsx"
 import "./App.css"
 import { useEffect, useState } from "react"
+import { Outlet } from "react-router-dom"
 
 function App() {
   const [listaDeTrilhas, isLoading] = useFetch(
@@ -18,8 +19,11 @@ function App() {
 
   return (
     <>
-    <Cabecalho></Cabecalho>
-    
+    <Cabecalho />
+    <Outlet />
+
+
+
     {isLoading && <p>Trilhas carregando</p>}
     {!isLoading && !!trilhas &&
      trilhas.map((trilha, index) => (
