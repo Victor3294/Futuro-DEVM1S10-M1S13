@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom"
 import App from "../App"
-import PaginaCadastroTrilha from "../pages/PaginaCadastroTrilha"
+import PaginaCadastroTrilha from "../pages/PaginaCadastro/index"
 import PaginaInicial from "../pages/PaginaInicial"
 import PaginaListaTrilhas from "../pages/PaginaListaTrilhas"
 
