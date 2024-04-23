@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 //Passo 5 - Passar o valor da prop onSubmit do formulario como a handleSubmit e como parâmetro da handleSubmit a função personalizada de envio do formulario (nesse caso sendForm);
 
 function PaginaCadastroTrilha() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: {errors} } = useForm();
   const { addTrail } = useContext(TrilhasContext);
   const navigate = useNavigate()
   function sendForm(formValue) {
@@ -40,6 +40,7 @@ function PaginaCadastroTrilha() {
                 },
               })}
             />
+            {errors?.nomeTrilha && <p>{errors.nomeTrilha?.message}</p>}
           </div>
 
           <div>
@@ -50,6 +51,7 @@ function PaginaCadastroTrilha() {
                 required: "Este campo é obrigatório",
               })}
             />
+            {errors?.duracao && <p>{errors.duracao?.message}</p>}
           </div>
 
           <div>
@@ -60,6 +62,7 @@ function PaginaCadastroTrilha() {
                 required: "Este campo é obrigatório",
               })}
             />
+            {errors?.trajeto && <p>{errors.trajeto?.message}</p>}
           </div>
 
           <div>
@@ -74,6 +77,7 @@ function PaginaCadastroTrilha() {
                 },
               })}
             />
+            {errors?.cidade && <p>{errors.cidade?.message}</p>}
           </div>
 
           <div>
@@ -88,6 +92,7 @@ function PaginaCadastroTrilha() {
                 },
               })}
             />
+            {errors?.estado && <p>{errors.estado?.message}</p>}
           </div>
 
           <div>
@@ -102,6 +107,7 @@ function PaginaCadastroTrilha() {
                 },
               })}
             />
+            {errors?.nomeUsuario && <p>{errors.nomeUsuario?.message}</p>}
           </div>
 
           <div>
@@ -116,6 +122,7 @@ function PaginaCadastroTrilha() {
               <option value="Intermediário">Intermediário</option>
               <option value="Difícil">Difícil</option>
             </select>
+            {errors?.dificuldade && <p>{errors.dificuldade?.message}</p>}
           </div>
 
           <div>
@@ -129,6 +136,7 @@ function PaginaCadastroTrilha() {
               <option value="caminhada / trekking">Caminhada / Trekking</option>
               <option value="ciclismo">Ciclismo</option>
             </select>
+            {errors?.tipo && <p>{errors.tipo?.message}</p>}
           </div>
 
           <div>
@@ -143,6 +151,7 @@ function PaginaCadastroTrilha() {
                 },
               })}
             />
+            {errors?.urlImagem && <p>{errors.urlImagem?.message}</p>}
           </div>
           <div>
             <button type="submit">Cadastrar</button>
