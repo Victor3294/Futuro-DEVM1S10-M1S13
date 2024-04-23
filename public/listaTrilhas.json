@@ -1,7 +1,6 @@
 {
   "trilhas": [
     {
-      "id": 1,
       "nomeTrilha": "Trilha da Pedra da Gávea",
       "cidade": "Rio de Janeiro",
       "estado": "RJ",
@@ -13,7 +12,6 @@
       "urlImagem": ""
     },
     {
-      "id": 2,
       "nomeTrilha": "Trilha do Pico da Bandeira",
       "cidade": "Alto Caparaó",
       "estado": "MG",
@@ -25,7 +23,6 @@
       "urlImagem": ""
     },
     {
-      "id": 3,
       "nomeTrilha": "Trilha da Costa da Lagoa",
       "cidade": "Florianópolis",
       "estado": "SC",
